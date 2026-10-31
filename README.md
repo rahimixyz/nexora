@@ -90,8 +90,8 @@ Issues and pull requests are welcome. If Nexora helps you, a ⭐ on the repo is 
 
 ## Custom development
 
-Need a backend, a real exchange or a custom version built on Nexora? Reach **NETXYZ** through [CodeCanyon](https://codecanyon.net/user/netxyz).
+Need a backend, a real exchange or a custom version built on Nexora? Get in touch through GitHub: [@rahimixyz](https://github.com/rahimixyz).
 
 ## License
 
-[MIT](LICENSE) © 2026 NETXYZ
+[MIT](LICENSE) © 2026 [rahimixyz](https://github.com/rahimixyz)
