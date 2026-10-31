@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand color presets. Each value is an "R G B" triplet used by Tailwind's brand-* colors. */
+:root,
+[data-accent='red'] {
+  --brand-50: 255 241 242;
+  --brand-100: 255 228 230;
+  --brand-500: 244 63 94;
+  --brand-600: 225 29 72;
+  --brand-700: 190 18 60;
+}
+[data-accent='blue'] {
+  --brand-50: 239 246 255;
+  --brand-100: 219 234 254;
+  --brand-500: 59 130 246;
+  --brand-600: 37 99 235;
+  --brand-700: 29 78 216;
+}
+[data-accent='violet'] {
+  --brand-50: 245 243 255;
+  --brand-100: 237 233 254;
+  --brand-500: 139 92 246;
+  --brand-600: 124 58 237;
+  --brand-700: 109 40 217;
+}
+[data-accent='emerald'] {
+  --brand-50: 236 253 245;
+  --brand-100: 209 250 229;
+  --brand-500: 16 185 129;
+  --brand-600: 5 150 105;
+  --brand-700: 4 120 87;
+}
+[data-accent='amber'] {
+  --brand-50: 255 251 235;
+  --brand-100: 254 243 199;
+  --brand-500: 245 158 11;
+  --brand-600: 217 119 6;
+  --brand-700: 180 83 9;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-ink-950 dark:text-slate-100;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-card dark:border-ink-700/60 dark:bg-ink-900 dark:shadow-none;
+  }
+  .card-pad {
+    @apply p-5 sm:p-6;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/50 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:bg-brand-700;
+  }
+  .btn-ghost {
+    @apply btn border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 dark:border-ink-700 dark:bg-ink-850 dark:text-slate-200 dark:hover:bg-ink-800;
+  }
+  .input {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 dark:border-ink-700 dark:bg-ink-850 dark:text-slate-100;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300;
+  }
+  .muted {
+    @apply text-slate-500 dark:text-slate-400;
+  }
+  .table-head {
+    @apply px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400;
+  }
+  .table-cell {
+    @apply whitespace-nowrap px-4 py-3.5 text-sm;
+  }
+}
+
+/* Thin scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(148 163 184 / 0.4) transparent;
+}
